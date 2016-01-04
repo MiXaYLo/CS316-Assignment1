@@ -1,0 +1,45 @@
+<html>
+<head>
+    <style type="text/css">
+    .title {
+        color: blue;
+        text-decoration: bold;
+        text-size: 1em;
+    }
+
+    body {
+    background-color: lightseagreen;
+
+}
+    a:link {
+    navbutton_next_pushed: red;
+}
+    body {
+    color: black;
+}
+    title{
+        color: black;
+    }
+
+h1 {
+    color: white;
+}
+    table{
+        table-layout: inherit;
+    }
+
+    </style>
+    <title>Cources</title>
+</head>
+<body>
+<fieldset>
+    <legend> <strong>All Cources </strong></legend>
+<ul>{% for cource in cource_list %}
+    <li><strong>{{ course.name }}, {{ course.code }}</strong> , {{ course.time }}, {{ course.teacher }}</li>
+{% endfor %}
+</ul>
+</fieldset>
+<button href="/student/">Add Student</button>   <br> <button href="/students/">Show All Students</button> <br>
+<button href="/teacher/">Add Teacher</button>   <br> <button href="/teachers/">Show All Teachers</button> <br>
+</body>
+</html>
