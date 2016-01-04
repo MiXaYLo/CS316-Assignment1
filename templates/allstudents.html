@@ -1,0 +1,61 @@
+<html>
+<head>
+    
+         <style type="text/css">
+    .title {
+        color: blue;
+        text-decoration: bold;
+        text-size: 1em;
+    }
+
+    body {
+    background-color: lightseagreen;
+
+}
+    a:link {
+    navbutton_next_pushed: red;
+}
+    body {
+    color: black;
+}
+    title{
+        color: black;
+    }
+
+h1 {
+    color: white;
+}
+    table{
+        table-layout: inherit;
+    }
+
+    </style>
+    
+    <title>Students</title>
+</head>
+<body>
+<ul>
+    <legend> <h1>All Students </h1></legend>
+    <table border="1" style="background-color:yellow;border:1px ;width:60%;border-collapse:collapse;">
+        <tr/>
+<tr style="background-color:gray;color:white;">
+<th style="padding:3px;"><center>Full Name<center/> <th ><center>E-mail<center/></th>
+
+<ul>{% for student in student_list %}
+      <tr>
+          <table border="1" style="background-color:yellow;border:1px ;width:60%;border-collapse:collapse;">
+        <tr/>
+<tr style="background-color:gray;color:white;">
+<th style="padding:3px;"><center>{{student.first_name}} {{ student.last_name }}<th style="padding:3px;">{{ student.email }}</th>
+
+</table>
+
+{% endfor %}
+</ul>
+
+
+
+<button href="/teacher/">Add Teacher</button>   <br> <button href="/teachers/">Show All Teachers</button> <br>
+<button href="/cource/">Add Cource</button>   <br> <button href="/cources/">Show All Cources</button> <br>
+</body>
+</html>
