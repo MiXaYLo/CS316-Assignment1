@@ -1,0 +1,55 @@
+<html>
+<head>
+    <style type="text/css">
+    .title {
+        color: blue;
+        text-decoration: bold;
+        text-size: 1em;
+    }
+
+    body {
+    background-color: lightseagreen;
+
+}
+    a:link {
+    navbutton_next_pushed: red;
+}
+    body {
+    color: black;
+}
+    title{
+        color: black;
+    }
+
+h1 {
+    color: white;
+}
+    table{
+        table-layout: inherit;
+    }
+
+    </style>
+    <title>Teachers</title>
+</head>
+<body>
+    <legend> <h1>Add Teacher </h1></legend>
+    <table border="1" style="background-color:yellow;border:1px ;width:60%;border-collapse:collapse;">
+        <tr/>
+<tr style="background-color:gray;color:white;">
+<th style="padding:3px;"><center>Full Name<center/> <th ><center>E-mail<center/></th>
+<ul>{% for teacher in teacher_list %}
+    <tr>
+          <table border="1" style="background-color:yellow;border:1px ;width:60%;border-collapse:collapse;">
+        <tr/>
+<tr style="background-color:gray;color:white;">
+<th style="padding:3px;"><center>{{teacher.first_name}} {{ teacher.last_name }}<th style="padding:3px;">{{ teacher.email }}</th>
+
+    </table>
+{% endfor %}
+
+</ul>
+</body>
+
+<button href="/student/">Add Student</button>   <br> <button href="/students/">Show All Students</button> <br>
+<button href="/cource/">Add Cource</button>   <br> <button href="/cources/">Show All Cources</button> <br>
+</html>
