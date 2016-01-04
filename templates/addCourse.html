@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+      <style type="text/css">
+    .title {
+        color: blue;
+        text-decoration: bold;
+        text-size: 1em;
+    }
+
+    body {
+    background-color: lightseagreen;
+
+}
+    a:link {
+    navbutton_next_pushed: red;
+}
+    body {
+    color: black;
+}
+
+h1 {
+    color: white;
+}
+
+    </style>
+    <link rel="icon" href="http://earsiv.sehir.edu.tr:8080/xmlui/themes/Mirage/images/favicon.ico">
+
+    <title>University Database</title>
+
+  </head>
+
+  <body>
+  <fieldset>
+    <legend> <h1>Add Course </h1></legend>
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+  </fieldset>
+  <button href="/student/">Add Student</button>   <br> <button href="/students/">Show All Students</button> <br>
+<button href="/teacher/">Add Teacher</button>   <br> <button href="/teachers/">Show All Teachers</button> <br>
+  </body>
